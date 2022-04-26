@@ -23,3 +23,26 @@ document.querySelector('#search-btn').addEventListener('click', function(){
 var inputCity = document.querySelector('#cityInput').value
 getWeather(inputCity)
 })
+
+document.querySelector('.search').addEventListener('keyup', function(event){
+    var inputCity = document.querySelector('#cityInput').value
+    if (event.key == 'Enter'){
+        getWeather(inputCity)
+    }
+})
+
+function postWeather(oneCallData){
+
+    var name = oneCallData
+    var icon= oneCallData.weather
+    var temp = oneCallData.main
+    var wind = oneCallData.wind
+    console.log(name, icon, temp, wind)
+
+    doucment.querySelector('.city').innerHTML = "Weather in" + name
+    doucment.querySelector('.icon').innerHTML = icon
+    doucment.querySelector('.temp').innerHTML = temp + ' ℉'
+    doucment.querySelector('.wind').innerHTML = 'Wind Speed' + wind + "mph"
+
+    
+}
