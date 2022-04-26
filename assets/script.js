@@ -13,8 +13,13 @@ function getWeather(city){
         .then(oneCallRes =>oneCallRes.json())
         .then(oneCallData =>{
         var currentWeather = oneCallData.current.weather[0].main
-        document.querySelector('#city-weather').textContent = currentWeather
+        document.querySelector('.description').textContent = currentWeather
         console.log(oneCallData)
+        var name = oneCallData.current.name
+        var icon= oneCallData.current.weather[0].icon
+        var temp = 'Temp' + oneCallData.current.main.temp.value + '℉'
+        var wind = oneCallData.current.wind.speed
+        console.log(name, icon, temp, wind)
         })
     })
 }
@@ -33,11 +38,7 @@ document.querySelector('.search').addEventListener('keyup', function(event){
 
 function postWeather(oneCallData){
 
-    var name = oneCallData
-    var icon= oneCallData.weather
-    var temp = oneCallData.main
-    var wind = oneCallData.wind
-    console.log(name, icon, temp, wind)
+    
 
     doucment.querySelector('.city').innerHTML = "Weather in" + name
     doucment.querySelector('.icon').innerHTML = icon
