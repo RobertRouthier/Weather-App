@@ -17,7 +17,7 @@ function getWeather(city){
         console.log(oneCallData)
         var name = oneCallData.current.name
         var icon= oneCallData.current.weather[0].icon
-        var temp = 'Temp' + oneCallData.current.main.temp.value + '℉'
+        var temp = 'Temp' + oneCallData[i].main.temp + '℉'
         var wind = oneCallData.current.wind.speed
         console.log(name, icon, temp, wind)
         })
