@@ -2,10 +2,16 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
 body{
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
     background-image: url('/Users/robertrouthier/Desktop/Robert-Routhier-Homework/Weather-/Weather-App/assets/wolfgang-hasselmann-bR_-gllg7Bs-unsplash.jpg');
@@ -14,12 +20,15 @@ body{
 
 
 .search-card{
+display: flex;
+justify-content: flex-start;
+align-items: center;
 background-color: #000000d0;
 color:aliceblue;
 padding: 2em;
 border-radius: 30px;
-width: 100%;
-max-width: 420px;
+width: 50%;
+height: 100vh;
 margin:1em
 }
 
@@ -28,4 +37,24 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin-bottom: 15px;
+}
+
+.recent{
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    width: 70%;
+}
+
+.main-card, .five-day{
+    border: 3px black;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
 }
