@@ -54,4 +54,9 @@ function postWeather(oneCallData){
     
 }
 
+//figure out 5 day forecast
+//figure out icon pull
+//figure out background change by location
+//style sidebar
+//fogire out append to sidebar from local storage
 

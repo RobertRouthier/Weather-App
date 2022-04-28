@@ -62,4 +62,17 @@ margin-bottom: 15px;
     color: aliceblue;
 }
 
+.five-day{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.single-card{
+    background-color: aliceblue;
+    color: black;
+    border: 1px solid black;
+}
+
 
