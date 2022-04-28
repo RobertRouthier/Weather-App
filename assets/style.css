@@ -1,33 +1,31 @@
 *{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+       
 }
+
+
 
 .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-
-
-body{
-    display: flex;
-    height: 100vh;
-    margin: 0;
     background-image: url('/Users/robertrouthier/Desktop/Robert-Routhier-Homework/Weather-/Weather-App/assets/wolfgang-hasselmann-bR_-gllg7Bs-unsplash.jpg');
     background-size:cover ;
+
 }
 
 
 .search-card{
 display: flex;
+flex-direction: row;
 justify-content: flex-start;
 align-items: center;
 background-color: #000000d0;
 color:aliceblue;
 padding: 2em;
 border-radius: 30px;
-width: 50%;
+width: 30%;
 height: 100vh;
 margin:1em
 }
@@ -41,7 +39,7 @@ margin-bottom: 15px;
 
 .recent{
     display: flex;
-    flex-direction: column;
+    flex-direction: row
 }
 
 .content{
@@ -57,4 +55,11 @@ margin-bottom: 15px;
     height: 300px;
     margin: 10px;
     padding: 10px;
+    background-color: #000000d0;
+    border-radius: 30px;
+    padding: 2em;
+    margin: 1em;
+    color: aliceblue;
 }
+
+
