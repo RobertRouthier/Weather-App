@@ -27,7 +27,9 @@ padding: 2em;
 border-radius: 30px;
 width: 30%;
 height: 100vh;
-margin:1em
+margin:1em;
+font-size: larger
+
 }
 
 .search{
@@ -72,7 +74,7 @@ margin-bottom: 15px;
 .single-card{
     background-color: aliceblue;
     color: black;
-    border: 1px solid black;
+    
 }
 
 

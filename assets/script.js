@@ -23,7 +23,7 @@ function getWeather(city){
             //var singleCard = document.querySelectorAll('single-card')
             for (var i = 0; i < 5; i++){
                 var fiveIcon = fiveDayData.list[i].weather[0].icon
-                document.querySelector('.five-icon').innerHTML = fiveIcon
+                document.querySelector('.five-icon').src = 'http://openweathermap.org/img/wn/' + fiveIcon + '@2x.png'
             }
             for (var i = 0; i < 5; i++){
                 var fiveTemp = fiveDayData.list[i].main.temp
@@ -76,7 +76,7 @@ function postWeather(oneCallData){
     
 
     document.querySelector('.city').innerHTML = "Weather in " + name
-    document.querySelector('.icon').innerHTML = icon
+    document.querySelector('.icon').src = 'http://openweathermap.org/img/wn/' + icon + '@2x.png'
     document.querySelector('.temp').innerHTML = ' ' + temp 
     document.querySelector('.humidity').innerHTML =  humid
     document.querySelector('.wind').innerHTML = 'Wind Speed ' + wind + " mph"
@@ -98,7 +98,7 @@ function postFiveDay(fiveDayData){
 }
 
 //figure out 5 day forecast
-//figure out icon pull
+//figure out icon pull http://openweathermap.org/img/w/10d.png
 //figure out background change by location
 //style sidebar
 //fogire out append to sidebar from local storage
