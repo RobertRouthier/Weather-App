@@ -20,26 +20,36 @@ function getWeather(city){
         fetch(fiveDayBase + `?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`)
         .then(fiveDayRes => fiveDayRes.json())
         .then(fiveDayData =>{
-            //var singleCard = document.querySelectorAll('single-card')
-            for (var i = 0; i < 5; i++){
+            var singleCard = document.querySelectorAll('.single-card')
+            var allIcon = document.querySelectorAll('.five-icon')
+            var allTemp = document.querySelectorAll('.five-temp')
+            var allWeather = document.querySelectorAll('.five-description')
+            var allHumid = document.querySelectorAll('.five-humidity')
+            var allWind = document.querySelectorAll('.five-wind')
+
+
+
+            for (i = 0; i < allIcon.length; i++){
+                console.log(allIcon.length)
                 var fiveIcon = fiveDayData.list[i].weather[0].icon
-                document.querySelector('.five-icon').src = 'http://openweathermap.org/img/wn/' + fiveIcon + '@2x.png'
+                allIcon[i].src = 'http://openweathermap.org/img/wn/' + fiveIcon + '@2x.png'
             }
-            for (var i = 0; i < 5; i++){
+            console.log(fiveIcon)
+            for (var i = 0; i < allTemp.length; i++){
                 var fiveTemp = fiveDayData.list[i].main.temp
-                document.querySelector('.five-temp').innerHTML = fiveTemp + ' ℉'
+                allTemp[i].innerHTML = fiveTemp + ' ℉'
             }
-            for (var i = 0; i < 5; i++){
+            for (var i = 0; i < allWeather.length; i++){
                 var fiveWeather = fiveDayData.list[i].weather[0].main
-                document.querySelector('.five-description').innerHTML = fiveWeather
+                allWeather[i].innerHTML = fiveWeather
             }
-            for (var i = 0; i < 5; i++){
+            for (var i = 0; i < allHumid.length; i++){
                 var fiveHumid = fiveDayData.list[i].main.humidity
-                document.querySelector('.five-humidity').innerHTML = fiveHumid + '%'
+                allHumid[i].innerHTML = fiveHumid + '%'
             }
-            for (var i = 0; i < 5; i++){
+            for (var i = 0; i < allWind.length; i++){
                 var fiveWind = fiveDayData.list[i].wind.speed
-                document.querySelector('.five-wind').innerHTML = fiveWind + " mph"
+                allWind[i].innerHTML = fiveWind + " mph"
             }
         
         console.log(fiveDayData)
