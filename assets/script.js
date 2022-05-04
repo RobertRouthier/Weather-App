@@ -107,8 +107,10 @@ function postFiveDay(fiveDayData){
     document.querySelector('.wind').innerHTML = 'Wind Speed ' + wind + " mph"
 }
 
-//figure out 5 day forecast
-//figure out icon pull http://openweathermap.org/img/w/10d.png
+//function saveSearch(){
+   // var cityName = 
+    //var recentSearch = JSON.parse(localStorage.getItem('recentSearch')) || [];
+//}
 //figure out background change by location
 //style sidebar
 //fogire out append to sidebar from local storage
