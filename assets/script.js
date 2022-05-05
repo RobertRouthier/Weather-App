@@ -1,3 +1,10 @@
+var recent = document.getElementById('cityInput')
+
+
+
+
+
+
 function getWeather(city){
     var oneCall = 'https://api.openweathermap.org/data/2.5/onecall';
     var API_KEY = '4253ae682bded8fe54667e18d996e279';
@@ -107,10 +114,24 @@ function postFiveDay(fiveDayData){
     document.querySelector('.wind').innerHTML = 'Wind Speed ' + wind + " mph"
 }
 
-//function saveSearch(){
-   // var cityName = 
-    //var recentSearch = JSON.parse(localStorage.getItem('recentSearch')) || [];
-//}
+function saveSearch(){
+    
+    var recentTrim = recent.value.trim()
+
+    if(recentTrim !== ""){
+
+    var recentSearch = JSON.parse(localStorage.getItem('recentSearch')) || [];
+
+
+
+    }
+}
+
+
+
+function postSearch(){
+
+}
 //figure out background change by location
 //style sidebar
 //fogire out append to sidebar from local storage
