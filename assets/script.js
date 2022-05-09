@@ -63,6 +63,7 @@ function getWeather(city){
         console.log(fiveIcon, fiveTemp, fiveWeather, fiveHumid, fiveWind)
     })
     postWeather(oneCallData)
+    saveSearch(recent)
     //postFiveDay(fiveDayData)
 })
 })
@@ -114,16 +115,21 @@ function postFiveDay(fiveDayData){
     document.querySelector('.wind').innerHTML = 'Wind Speed ' + wind + " mph"
 }
 
+
+var recentlist = document.querySelector('.recent')
+
 function saveSearch(){
     
     var recentTrim = recent.value.trim()
 
     if(recentTrim !== ""){
 
-    var recentSearch = JSON.parse(localStorage.getItem('recentSearch')) || [];
+    var recentSearch = localStorage.getItem('recentSearch') || [];
 
+    
 
-
+    window.localStorage.setItem('recentSearch', recentTrim)
+    //window.location.href = "index.html";
     }
 }
 
