@@ -64,6 +64,7 @@ function getWeather(city){
     })
     postWeather(oneCallData)
     saveSearch(recent)
+    postSearch()
     //postFiveDay(fiveDayData)
 })
 })
@@ -136,6 +137,17 @@ function saveSearch(){
 
 
 function postSearch(){
+
+    var recentSearch = JSON.parse(window.localStorage.getItem('recentSearch')) || [];
+
+    recentSearch.forEach(function(recent){
+        var list = document.createElement('button');
+        list.textContent = recentSearch.value
+
+        var recentList = document.querySelector('.recent')
+
+        recentList.appendChild(list);
+    })
 
 }
 //figure out background change by location
