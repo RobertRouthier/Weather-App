@@ -1,6 +1,6 @@
 var recent = document.getElementById('cityInput')
 
-
+var recentValue = recent.value
 
 
 
@@ -116,7 +116,7 @@ function postFiveDay(fiveDayData){
     document.querySelector('.wind').innerHTML = 'Wind Speed ' + wind + " mph"
 }
 
-
+var recentTrim = recent.value.trim()
 var recentlist = document.querySelector('.recent')
 
 function saveSearch(){
@@ -125,8 +125,7 @@ function saveSearch(){
 
     if(recentTrim !== ""){
 
-    var recentSearch = localStorage.getItem('recentSearch') || [];
-
+    var recentSearch = window.localStorage.getItem('recentSearch') || [];
     
 
     window.localStorage.setItem('recentSearch', recentTrim)
@@ -138,16 +137,17 @@ function saveSearch(){
 
 function postSearch(){
 
-    var recentSearch = JSON.parse(window.localStorage.getItem('recentSearch')) || [];
+    var recentSearch = window.localStorage.getItem('recentSearch') || [];
 
-    recentSearch.forEach(function(recent){
+    
         var list = document.createElement('button');
-        list.textContent = recentSearch.value
+        list.textContent = recent.value
+        list.className = "cities"
 
         var recentList = document.querySelector('.recent')
 
         recentList.appendChild(list);
-    })
+    
 
 }
 //figure out background change by location
