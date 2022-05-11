@@ -38,7 +38,15 @@ width: 100%;
 
 input{
 width: 80%;
+background-color: #000000d0;
+color:aliceblue;
+margin-left: 5px;
 
+}
+#search-btn{
+    background-color: #000000d0;
+    color:aliceblue;
+    border-radius: 5px;
 }
 
 .recent{
@@ -57,7 +65,10 @@ width: 80%;
     padding: 8px 28px;
     font-size: large;
     margin: 3px;
-    margin-top: 5px;
+    margin-top: 20px;
+    background-color: #000000d0;
+    color:aliceblue;
+    border-radius: 5px;
 
 }
 
